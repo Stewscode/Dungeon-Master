@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Arrow.gd" type="Script" id=1]
+[ext_resource path="res://Themes/Sprites/Spritesheets/Monsters/projectile_arrow.png" type="Texture" id=2]
+
+[node name="Arrow " type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 103, 14, 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PoolVector2Array( 24.1595, -5.84772, 24.0482, -1.95005, 28.0572, -1.83868, 28.0572, 1.72491, 24.0482, 2.17036, 24.1595, 5.95668, -16.265, 6.06804, -16.0423, 10.2998, -23.8376, 10.0771, -24.0603, -10.0795, -15.9309, -9.85677, -16.0423, -5.95909 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[connection signal="body_entered" from="." to="." method="_on_Arrow__body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -1,0 +1,123 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/UI_Square.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/UI.gd" type="Script" id=2]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color( 0, 0, 0, 0.415686 )
+margin_left = 28.699
+margin_top = 23.3597
+margin_right = 288.699
+margin_bottom = 98.3597
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+margin_left = 269.0
+margin_top = 4.58523
+margin_right = 303.0
+margin_bottom = 37.5853
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthBar" type="TextureProgress" parent="Background"]
+margin_left = 5.97339
+margin_top = 4.58523
+margin_right = 253.973
+margin_bottom = 37.5853
+value = 75.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0, 0, 0, 0 )
+tint_progress = Color( 0.129412, 0.647059, 0.137255, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExperienceBar" type="TextureProgress" parent="Background"]
+margin_left = 5.97339
+margin_top = 42.7364
+margin_right = 253.973
+margin_bottom = 53.7364
+max_value = 0.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0.898039, 0.164706, 0.164706, 0 )
+tint_progress = Color( 0, 0.6, 1, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaminaBar" type="TextureProgress" parent="Background"]
+margin_left = 5.97339
+margin_top = 58.4034
+margin_right = 253.973
+margin_bottom = 69.4034
+value = 100.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 1, 1, 1, 0 )
+tint_progress = Color( 0.65098, 0.65098, 0.65098, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerLevelLabel" type="Label" parent="Background"]
+modulate = Color( 0.2, 0.196078, 0.196078, 1 )
+self_modulate = Color( 0.164706, 0.164706, 0.164706, 1 )
+margin_left = 269.0
+margin_top = 4.58523
+margin_right = 303.0
+margin_bottom = 37.5852
+text = "999"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerGoldLabel" type="Label" parent="Background"]
+margin_left = 5.97339
+margin_top = 76.5892
+margin_right = 59.9734
+margin_bottom = 90.5892
+text = "Gold: 13"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExpBar" type="ProgressBar" parent="Background"]
+modulate = Color( 0, 0.952941, 1, 1 )
+margin_left = 6.1403
+margin_top = 40.9822
+margin_right = 254.14
+margin_bottom = 54.9822
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.980392, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="Background"]
+margin_left = 7.30096
+margin_top = 96.6403
+margin_right = 145.301
+margin_bottom = 153.64
+text = "Score : 100000"

@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Themes/Sprites/Backgrounds/Main Menu Background.jpg" type="Texture" id=1]
+[ext_resource path="res://Scenes/Title Screen and Related/Menu Button.tscn" type="PackedScene" id=2]
+
+[node name="Title Screen" type="Control"]
+margin_right = 974.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main Menu Background" type="TextureRect" parent="."]
+modulate = Color( 0.909804, 0.368627, 0.407843, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -115.0
+margin_top = 172.0
+margin_right = 118.0
+margin_bottom = 232.0
+focus_neighbour_top = NodePath("../Exit Button")
+focus_neighbour_bottom = NodePath("../Highscores Button")
+text = "PLAY"
+reference_path = "res://Scenes/Levels/Level 1.tscn"
+start_focused = true
+
+[node name="Highscores Button" parent="." instance=ExtResource( 2 )]
+margin_left = 372.0
+margin_top = 352.0
+margin_right = 605.0
+margin_bottom = 412.0
+focus_neighbour_top = NodePath("../Play Button")
+focus_neighbour_bottom = NodePath("../Exit Button")
+text = "HIGHSCORES"
+reference_path = "res://Scenes/Title Screen and Related/Highscores Screen.tscn"
+
+[node name="Exit Button" parent="." instance=ExtResource( 2 )]
+margin_left = 372.0
+margin_top = 444.0
+margin_right = 605.0
+margin_bottom = 504.0
+focus_neighbour_top = NodePath("../Highscores Button")
+focus_neighbour_bottom = NodePath("../Play Button")
+text = "EXIT"
+
+[node name="Controls Button" parent="." instance=ExtResource( 2 )]
+margin_left = 372.0
+margin_top = 260.0
+margin_right = 605.0
+margin_bottom = 320.0
+text = "CONTROLS"
+reference_path = "res://Scenes/Title Screen and Related/Controls Screen.tscn"

@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Themes/Sprites/Backgrounds/Main Menu Background.jpg" type="Texture" id=1]
+[ext_resource path="res://Scenes/Title Screen and Related/Back Button.tscn" type="PackedScene" id=2]
+
+[node name="Controls Screen" type="Control"]
+margin_right = 974.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main Menu Background" type="TextureRect" parent="."]
+modulate = Color( 0.909804, 0.368627, 0.407843, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu Button" parent="." instance=ExtResource( 2 )]
+margin_left = 780.099
+margin_top = 477.656
+margin_right = 915.099
+margin_bottom = 539.656
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -99.0
+margin_top = -40.0
+margin_right = 99.0
+margin_bottom = 178.0
+text = "Move: WASD or Arrow Keys.
+
+
+Attack: \"Enter\" Key.
+
+
+Dodge: \"Shift\" Key.
+
+
+Open Chests/ Interact: \"E\" key.
+
+Pause Game: \"Escape\" Key
+
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -35.5
+margin_top = 189.761
+margin_right = 35.5
+margin_bottom = 229.761
+text = "CONTROLS"
